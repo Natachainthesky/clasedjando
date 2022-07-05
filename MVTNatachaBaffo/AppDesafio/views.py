@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from models import Familiar
 from django.http import HttpResponse
+from django.template import Context, Template
 
 # Create your views here.
 def familiar(self):
@@ -10,3 +11,12 @@ def familiar(self):
     texto= f'Nombre: {familiar.nombre} Edad: {familiar.edad} Fecha de Nacimiento: {familiar.fecha_nac}'
 
     return HttpResponse(texto)
+
+def usotemplate (self):
+    miArchivo=open("C:/Natacha/Cursos y capacitaciones/Python-CoderHouse/RepoDjango/MVTNatachaBaffo/Plantillas/template.html")
+    plantilla=Template(miArchivo.read())
+    miArchivo.close()
+    contexto=Context()
+    documento=plantilla.render(contexto)
+
+    return HttpResponse(documento)
