@@ -20,5 +20,5 @@ from AppDesafio.views import familiar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AppDesafio/', include('AppDesafio.urls')),
-    path('familiar/', familiar)
+    
 ]
