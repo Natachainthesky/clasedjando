@@ -1,8 +1,10 @@
+import imp
 from django.http import HttpResponse
 from django.shortcuts import render
 from models import Familiar
 from django.http import HttpResponse
 from django.template import Context, Template
+from AppDesafio.models import Familiar
 
 # Create your views here.
 def familiar(self):
