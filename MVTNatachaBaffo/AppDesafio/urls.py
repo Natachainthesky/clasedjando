@@ -4,6 +4,6 @@ from AppDesafio.views import familiar
 
 
 urlpatterns = [
-    path('familiar/', familiar),
+    path('familiar/<str:name>/<int:age>/<int:ano>/<int:mes>/<int:dia>', familiar),
   
 ]
